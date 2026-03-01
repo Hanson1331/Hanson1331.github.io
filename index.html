@@ -112,34 +112,35 @@
             color: #4a5568;
             margin-top: 5px;
         }
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        li {
-            margin-bottom: 5px;
-            color: #4a5568;
-        }
         .publication-venue {
             color: #2c5282;
             font-style: italic;
             font-size: 0.9rem;
         }
-        .skills-grid {
-            display: grid;
-            gap: 15px;
-        }
-        .skill-category {
+        .publication-section-title {
+            font-size: 1rem;
+            color: #1a365d;
+            margin-top: 15px;
             margin-bottom: 10px;
-        }
-        .skill-category strong {
-            color: #2d3748;
+            font-weight: 600;
         }
         footer {
             text-align: center;
             padding: 20px;
             color: #718096;
             font-size: 0.9rem;
+        }
+        .scholar-link {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .scholar-link a {
+            color: #2c5282;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .scholar-link a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 600px) {
             header h1 {
@@ -159,8 +160,8 @@
             <p>Junior, The University of Hong Kong, Hong Kong, China</p>
             <div class="contact-info">
                 <a href="mailto:hansonz641@gmail.com">hansonz641@gmail.com</a> |
-                <a href="tel:+13412379163">(341) 237-9163</a> |
-                <a href="https://Hanson1331.github.io">Hanson1331.github.io</a>
+                <a href="mailto:hanson_z7@berkeley.edu">hanson_z7@berkeley.edu</a> |
+                <a href="tel:+13412379163">(341) 237-9163</a>
             </div>
         </div>
     </header>
@@ -169,10 +170,11 @@
         <section id="research-interests">
             <h2>Research Interests</h2>
             <div class="interests">
-                <span class="interest-tag">Personalized Agent</span>
-                <span class="interest-tag">Knowledge Distillation</span>
-                <span class="interest-tag">Model Pruning</span>
-                <span class="interest-tag">Spatio-temporal Prediction</span>
+                <span class="interest-tag">AI Agent</span>
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">LLM & NLP</span>
+                <span class="interest-tag">Spatio-Temporal Data Mining</span>
+                <span class="interest-tag">Model Compression</span>
             </div>
         </section>
 
@@ -184,21 +186,72 @@
                     <span class="item-date">Sep 2023 - Present</span>
                 </div>
                 <div class="item-location">Hong Kong, China</div>
-                <div class="item-details">Major in Computer Science</div>
+                <div class="item-details">Bachelor of Engineering (Computer Science) &nbsp;|&nbsp; CGPA: 3.74</div>
+                <div class="item-details">TOEFL: 111 (R30+L28+S25+W28) &nbsp;|&nbsp; GRE: 331 (V161+Q170+AW3.5)</div>
             </div>
             <div class="education-item">
                 <div class="item-header">
-                    <span class="item-title">Berkeley BGA Program</span>
-                    <span class="item-date">Jan 2026 - Present</span>
+                    <span class="item-title">University of California, Berkeley (Berkeley Global Access)</span>
+                    <span class="item-date">Jan 2026 - May 2026</span>
                 </div>
-                <div class="item-location">UC Berkeley, California, USA</div>
+                <div class="item-location">Berkeley, CA, USA</div>
+                <div class="item-details">Visiting Student, Computer Science</div>
             </div>
             <div class="education-item">
                 <div class="item-header">
-                    <span class="item-title">GLOBEX Summer Program</span>
+                    <span class="item-title">Peking University (GLOBEX Julmester Program)</span>
                     <span class="item-date">Jul 2024</span>
                 </div>
-                <div class="item-location">Peking University, Beijing, China</div>
+                <div class="item-location">Beijing, China</div>
+                <div class="item-details">College of Engineering, Summer School</div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="scholar-link">
+                📎 <a href="https://scholar.google.com/citations?user=0HHaRP0AAAAJ&hl=zh-TW" target="_blank">Google Scholar Profile</a>
+            </div>
+
+            <div class="publication-section-title">Published</div>
+
+            <div class="publication-item">
+                <div class="item-title">Enhancing Spatiotemporal Prediction through the Integration of Mamba State Space Models and Diffusion Transformers</div>
+                <div class="item-details"><strong>Hansheng Zeng</strong>, Yuqi Li, Ruize Niu, Chuanguang Yang, Shiping Wen &nbsp;(First Author)</div>
+                <div class="publication-venue">Knowledge-Based Systems (JCR Q1, CAS Q1, IF=7.6)</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Frequency-Aligned Knowledge Distillation for Lightweight Spatiotemporal Forecasting</div>
+                <div class="item-details">Yuqi Li, Chuanguang Yang, <strong>Hansheng Zeng</strong>, Zeyu Dong, Zhulin An, Yongjun Xu, Yingli Tian, Hao Wu</div>
+                <div class="publication-venue">ICCV 2025</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Efficient Medical Image Segmentation via Reinforcement Learning Driven K-Space Sampling</div>
+                <div class="item-details">Yuqi Li*, <strong>Hansheng Zeng*</strong>, Chuanguang Yang, Weiping Ding &nbsp;(Co-first Author)</div>
+                <div class="publication-venue">TETCI (JCR Q1, CAS Q2, IF=6.5)</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">DIEq: Dynamic Identity Equilibrium for Author Disambiguation in KDD Cup 2024 WhoIsWho-IND Challenge</div>
+                <div class="item-details">Zhixiang Lu, <strong>Hansheng Zeng</strong>, Yuqi Li</div>
+                <div class="publication-venue">KDD 2024 Workshop OAG-Challenge Cup</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">CPG: Channel Pruning with DFS Guided Grouping for Efficient Medical Image Segmentation</div>
+                <div class="item-details">Xilin Yan, Fuyan Zhang, Yuqi Li, Zhen Qiu, Boyuan Zhao, Jiarui Li, <strong>Hansheng Zeng</strong>, Yihao Chen, Chuanguang Yang</div>
+                <div class="publication-venue">ICONIP 2024</div>
+            </div>
+
+            <div class="publication-section-title" style="margin-top: 25px;">Under Review</div>
+
+            <div class="publication-item">
+                <div class="item-title">Reinforcing Spatio-Temporal Graph Neural Networks with a Physics Reward Oracle</div>
+                <div class="item-details"><strong>Hansheng Zeng</strong>, Yuqi Li, Chuanguang Yang, Weilun Feng, Zeyu Dong, Yao Lu, Yingli Tian, Hao Wu</div>
+                <div class="publication-venue">Under Review</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Ammkd: Adaptive Multimodal Multi-Teacher Distillation for Lightweight Vision-Language Models</div>
+                <div class="item-details">Yuqi Li, Chuanguang Yang, Junhao Dong, Zhengtao Yao, Haoyan Xu, Zeyu Dong, <strong>Hansheng Zeng</strong>, Zhulin An, Yingli Tian</div>
+                <div class="publication-venue">Under Review</div>
             </div>
         </section>
 
@@ -210,23 +263,13 @@
                     <span class="item-date">Jun 2025 - Present</span>
                 </div>
                 <div class="item-location">The University of Hong Kong</div>
-                <div class="item-details">Under the guidance of PhD mentor Mr. Xubin Ren</div>
-                <ul>
-                    <li>Researched mobile agent and self-evolution mechanisms, and investigated evaluation methods for agent hallucinations</li>
-                    <li>Optimized prompts based on the PersonalWab framework for personalized agent, and designed and integrated RAG for model fine-tuning</li>
-                </ul>
             </div>
             <div class="experience-item">
                 <div class="item-header">
                     <span class="item-title">Professor Chuanguang Yang's Research Group</span>
-                    <span class="item-date">Jun 2024 - Aug 2025</span>
+                    <span class="item-date">Jun 2024 - Present</span>
                 </div>
                 <div class="item-location">Institute of Computing Technology, Chinese Academy of Sciences</div>
-                <ul>
-                    <li>Contributed to research design, literature review, comparative experiments, manuscript writing, and revision to validate the advantages of the proposed method</li>
-                    <li>As first author, proposed a novel spatio-temporal prediction method using Mamba and Diffusion Transformers; spearheaded the project from conception to execution</li>
-                    <li>Investigated the application of model compression techniques across various domains</li>
-                </ul>
             </div>
             <div class="experience-item">
                 <div class="item-header">
@@ -234,39 +277,6 @@
                     <span class="item-date">Apr 2024 - Jun 2024</span>
                 </div>
                 <div class="item-location">The University of Hong Kong</div>
-                <ul>
-                    <li>Developed an educational computer game to teach Cantonese phonetics and music notes to children using Unity and C#, and to collect data for educational research</li>
-                    <li>Honored with a Certificate of Appreciation for 120 hours of volunteer work</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="publication-item">
-                <div class="item-title">Enhancing Spatiotemporal Prediction through the Integration of Mamba State Space Models and Diffusion Transformers</div>
-                <div class="item-details"><strong>Hansheng Zeng</strong>, Yuqi Li, Ruize Niu, Chuanguang Yang, Shiping Wen</div>
-                <div class="publication-venue">Knowledge-Based Systems (JCR-Q1; Impact Factor: 7.4)</div>
-            </div>
-            <div class="publication-item">
-                <div class="item-title">Frequency-Aligned Knowledge Distillation for Lightweight Spatiotemporal Forecasting</div>
-                <div class="item-details">Yuqi Li, Chuanguang Yang, <strong>Hansheng Zeng</strong>, Zeyu Dong, Zhulin An, Yongjun Xu, Yingli Tian, Hao Wu</div>
-                <div class="publication-venue">ICCV 2025</div>
-            </div>
-            <div class="publication-item">
-                <div class="item-title">Efficient Medical Image Segmentation via Reinforcement Learning Driven K-Space Sampling</div>
-                <div class="item-details">Yuqi Li*, <strong>Hansheng Zeng*</strong>, Chuanguang Yang, Weiping Ding</div>
-                <div class="publication-venue">TETCI</div>
-            </div>
-            <div class="publication-item">
-                <div class="item-title">DIEq: Dynamic Identity Equilibrium for Author Disambiguation in KDD Cup 2024 WhoIsWho-IND Challenge</div>
-                <div class="item-details">Zhixiang Lu, <strong>Hansheng Zeng</strong>, Yuqi Li</div>
-                <div class="publication-venue">KDD 2024 Workshop OAG-Challenge Cup</div>
-            </div>
-            <div class="publication-item">
-                <div class="item-title">CPG: Channel Pruning with DFS Guided Grouping for Efficient Medical Image Segmentation</div>
-                <div class="item-details">Xilin Yan, Fuyan Zhang, Yuqi Li, Zhen Qiu, Boyuan Zhao, Jiarui Li, <strong>Hansheng Zeng</strong>, Yihao Chen, Chuanguang Yang</div>
-                <div class="publication-venue">ICONIP 2024</div>
             </div>
         </section>
 
@@ -281,20 +291,6 @@
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Languages:</strong> Chinese, English (TOEFL 111 & GRE 331), Cantonese
-                </div>
-                <div class="skill-category">
-                    <strong>Development Tools:</strong> PyTorch, Markdown, LaTeX, Unity, Git, Linux, Docker, PostgreSQL
-                </div>
-                <div class="skill-category">
-                    <strong>Programming Languages:</strong> Python, C/C++, Java, Assembly
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer>
