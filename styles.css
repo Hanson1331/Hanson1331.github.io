@@ -1,0 +1,526 @@
+:root {
+  --blue: #24568f;
+  --blue-dark: #173b67;
+  --blue-soft: #eef5fc;
+  --ink: #1a2430;
+  --muted: #5c6875;
+  --line: #dfe6ed;
+  --paper: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-dark);
+}
+
+a:focus-visible {
+  outline: 3px solid #8eb7e1;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: #cfe2f6;
+  color: var(--ink);
+}
+
+.page-width {
+  width: min(1040px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: -70px;
+  left: 18px;
+  padding: 10px 14px;
+  background: var(--ink);
+  color: #ffffff;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 18px;
+}
+
+.topbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.topbar-inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.site-name {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 0.9rem;
+}
+
+.topbar nav a {
+  color: var(--muted);
+}
+
+.topbar nav a:hover {
+  color: var(--blue);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  padding: 78px 0 64px;
+}
+
+.portrait-wrap {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #d7dfe8;
+  border-radius: 10px;
+  background: var(--blue-soft);
+  box-shadow: 0 10px 30px rgba(27, 64, 105, 0.08);
+}
+
+.portrait-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.intro h1 {
+  margin: -8px 0 6px;
+  color: #152235;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.15rem, 4.3vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.intro h1 span {
+  margin-left: 10px;
+  color: #4f6074;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.47em;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.position {
+  margin: 0 0 23px;
+  color: var(--blue);
+  font-size: 0.97rem;
+  font-weight: 650;
+}
+
+.bio {
+  margin: 0;
+  color: #344252;
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+
+.bio a {
+  text-decoration: underline;
+  text-decoration-color: #a8bfd8;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.bio strong,
+.bio strong a {
+  color: #182a41;
+  font-weight: 760;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 21px;
+  margin-top: 24px;
+  font-size: 0.94rem;
+  font-weight: 650;
+}
+
+.profile-links a::after {
+  content: " ↗";
+  font-size: 0.78em;
+}
+
+.profile-links a:first-child::after {
+  content: "";
+}
+
+.section {
+  padding: 44px 0 60px;
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  margin: 0 0 25px;
+  color: #17263a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 18px;
+  padding: 9px 0;
+  color: #394858;
+  line-height: 1.55;
+}
+
+.news-list time {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.section-title-row h2 {
+  margin-bottom: 6px;
+}
+
+.section-title-row > a {
+  font-size: 0.9rem;
+}
+
+.contribution-note {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.publication-list {
+  display: grid;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: minmax(285px, 37%) minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.publication-image {
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #dbe3ec;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.publication-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.publication-tetci .publication-image {
+  aspect-ratio: 2.35 / 1;
+}
+
+.paper-label {
+  width: fit-content;
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.publication h3 {
+  margin: 0 0 10px;
+  color: #192a40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.18rem, 2.3vw, 1.45rem);
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+}
+
+.authors,
+.venue,
+.paper-note {
+  margin: 0;
+}
+
+.authors {
+  color: #4b5968;
+  font-size: 0.91rem;
+  line-height: 1.55;
+}
+
+.authors strong {
+  color: #182a41;
+  font-weight: 800;
+}
+
+.venue {
+  margin-top: 7px;
+  color: var(--blue);
+  font-size: 0.91rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.paper-links {
+  display: flex;
+  gap: 11px;
+  margin: 10px 0 9px;
+  font-size: 0.89rem;
+  font-weight: 700;
+}
+
+.paper-note {
+  color: #526171;
+  font-size: 0.91rem;
+  line-height: 1.58;
+}
+
+.other-publications {
+  padding-bottom: 70px;
+}
+
+.compact-publication-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: other-paper;
+}
+
+.compact-publication-list li {
+  position: relative;
+  counter-increment: other-paper;
+  padding: 20px 0 20px 46px;
+  border-top: 1px solid var(--line);
+}
+
+.compact-publication-list li::before {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  content: counter(other-paper, decimal-leading-zero);
+  color: #8090a1;
+  font-family: monospace;
+  font-size: 0.76rem;
+}
+
+.compact-paper-title {
+  color: #192a40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.compact-paper-title:hover {
+  color: var(--blue);
+}
+
+.compact-authors,
+.compact-venue {
+  margin: 5px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.compact-authors {
+  color: #4b5968;
+}
+
+.compact-authors strong {
+  color: #182a41;
+  font-weight: 800;
+}
+
+.compact-venue {
+  color: var(--blue);
+  font-weight: 650;
+}
+
+.achievement-badge {
+  display: inline-block;
+  margin-left: 9px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  background: #fbfcfd;
+}
+
+.footer-inner {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #667382;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 780px) {
+  .intro {
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .publication-image {
+    width: min(100%, 600px);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-width {
+    width: min(100% - 32px, 520px);
+  }
+
+  .topbar-inner {
+    min-height: 58px;
+  }
+
+  .topbar nav {
+    gap: 17px;
+    font-size: 0.82rem;
+  }
+
+  .topbar nav a:first-child {
+    display: none;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 27px;
+    padding: 52px 0 48px;
+  }
+
+  .portrait-wrap {
+    width: 154px;
+  }
+
+  .intro h1 {
+    margin-top: 0;
+  }
+
+  .bio {
+    font-size: 0.98rem;
+    line-height: 1.74;
+  }
+
+  .section {
+    padding: 38px 0 50px;
+  }
+
+  .news-list li {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .section-title-row {
+    display: block;
+  }
+
+  .section-title-row > a {
+    display: inline-block;
+    margin: 0 0 14px;
+  }
+
+  .publication {
+    padding: 28px 0 34px;
+  }
+
+  .publication h3 {
+    font-size: 1.25rem;
+  }
+
+  .footer-inner {
+    min-height: 88px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
